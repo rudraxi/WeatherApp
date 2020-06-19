@@ -108,7 +108,7 @@ workflows:
            - publish_and_deploy:
                requires:
                   - test
-               context: webApp           region: $GOOGLE_COMPUTE_ZONE
+               context: webApp
            unauthenticated: true         
    
 
