@@ -2,7 +2,7 @@ version: 2
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.1
   cloudrun: circleci/gcp-cloud-run@1.0.0
-  
+
 defaults: &defaults
   machine:
   environment:
@@ -41,7 +41,7 @@ jobs:
       - gcp-gcr/push-image:
           google-project-id: GOOGLE_PROJECT_ID
           registry-url: "us.gcr.io"
-          image: $DOCKER_IMAGE  
+          image: $DOCKER_IMAGE
       - cloudrun/deploy:
           platform: "managed"
           image: "us.gcr.io/$GOOGLE_PROJECT_ID/$DOCKER_IMAGE"
