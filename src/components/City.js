@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {getReportStatic} from '../service'
 
+
 class City extends Component{
   componentDidMount() {
     getReportStatic().then( report => {
@@ -9,6 +10,8 @@ class City extends Component{
       });
     })
   }
+  
+  
   getCityRow(city){
     return (
         <tr>

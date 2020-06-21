@@ -47,8 +47,9 @@ jobs:
            image: "us.gcr.io/$GOOGLE_PROJECT_ID/$DOCKER_IMAGE"
            service-name: $DOCKER_IMAGE
            region: $GOOGLE_COMPUTE_ZONE
-           unauthenticated: true         
-   
+           unauthenticated: true
+           args: --update-env-vars=[ci=true,REACT_APP_WHOST='https://node-app-gwbvyf6dda-ue.a.run.app']
+
 
 
 
